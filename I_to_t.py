@@ -21,5 +21,6 @@ height,width,channel=img.shape
 plt.imshow(img)
 # print(type(img))
 # print(height,width,channel)
-text=pytesseract.image_to_string(img)
+custom_config = r'-l eng+hin'
+text=pytesseract.image_to_string(img,config=custom_config)
 print(text)
